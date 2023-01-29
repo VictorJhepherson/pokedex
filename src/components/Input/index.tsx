@@ -1,0 +1,97 @@
+import React from "react";
+import { Label, InputArea, InputComponent } from "./styled";
+import theme from "../../styles/theme";
+
+import { IInputProps } from "../../interfaces";
+
+import { Text, Button } from '../';
+
+const Input: React.FC<IInputProps> = ({ name, attributes }) => {
+  const {
+    setInputValue,
+    onFocus,
+    onBlur,
+    placeholder,
+    value,
+    required,
+    type = "text",
+    label,
+    hasClearButton = true,
+    hasSearchButton = false,
+    styleProps,
+  } = attributes;
+
+  const handleOnClear = () => {
+    setInputValue("");
+  };
+
+  return (
+    <Label id={name} styleProps={styleProps} data-testid="input-label">
+      {label ?
+        <Text
+          name={`input-text`}
+          attributes={{
+            text: label,
+            styleProps: {
+              textComponent: {
+                fontFamily: theme.font.fontFamily,
+                fontSize: theme.font.size.small,
+                fontWeight: theme.font.bold,
+                color: theme.colors.black,
+              }
+            }
+          }}
+        />
+      : <></>}
+      <InputArea styleProps={styleProps} data-testid="input-area">
+        <InputComponent
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          required={required}
+          onChange={(e) => setInputValue(e.target.value)}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          styleProps={styleProps}
+          data-testid="input-component"
+        />
+
+        {hasClearButton && value && (
+          <Button
+            name={`clear-button-input`}
+            attributes={{
+              onClick: handleOnClear,
+              icon: 'backSpace',
+              iconColor: 'white',
+              styleProps: {
+                type: 'circle',
+                buttonComponent: {
+                  width: '30px',
+                  height: '30px',
+                  marginRight: '5px',
+                  marginLeft: '-35px',
+                }
+              }
+            }}
+          />
+        )}
+
+        {hasSearchButton && (
+          <Button
+            name={`search-button-input`}
+            attributes={{
+              icon: 'arrowRight',
+              iconColor: 'white',
+              styleProps: {
+                type: 'circle',
+                buttonComponent: {}
+              }
+            }}
+          />
+        )}
+      </InputArea>
+    </Label>
+  )
+}
+
+export default Input;
