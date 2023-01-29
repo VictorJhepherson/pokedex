@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
 
+import 'react-toastify/dist/ReactToastify.css';
+
 export default createGlobalStyle`
   @font-face {
     font-family: 'Silkscreen';

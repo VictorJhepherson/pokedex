@@ -19,7 +19,7 @@ export const ButtonComponent = styled.button<IProps>`
     transition: ${styleProps && styleProps.buttonComponent.transition || '0.6s ease-in-out'};
 
     &:hover {
-      transform: ${styleProps && styleProps.buttonComponent.transform || 'scale(1.2)'};
+      transform: ${styleProps && styleProps.buttonComponent.transform || 'scale(1.09)'};
     }
 
     ${styleProps && styleProps.type === "circle" ? css`

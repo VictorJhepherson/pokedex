@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight, FaBackspace } from "react-icons/fa";
 import { Label, InputArea, InputComponent } from "./styled";
 import theme from "../../styles/theme";
 
@@ -61,7 +62,7 @@ const Input: React.FC<IInputProps> = ({ name, attributes }) => {
             name={`clear-button-input`}
             attributes={{
               onClick: handleOnClear,
-              icon: 'backSpace',
+              icon: FaBackspace,
               iconColor: 'white',
               styleProps: {
                 type: 'circle',
@@ -80,7 +81,7 @@ const Input: React.FC<IInputProps> = ({ name, attributes }) => {
           <Button
             name={`search-button-input`}
             attributes={{
-              icon: 'arrowRight',
+              icon: FaArrowRight,
               iconColor: 'white',
               styleProps: {
                 type: 'circle',

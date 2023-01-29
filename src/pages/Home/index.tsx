@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { Container } from "./styled";
 import theme from "../../styles/theme";
 
@@ -8,7 +9,16 @@ export default function Home() {
   const [searchValue, setSearchValue] = useState("");
   const [toggleOn, setToggleOn] = useState(true);
   const [inputValue, setInputValue] = useState("");
-  const [inputValue2, setInputValue2] = useState("");
+
+  const handleAlert = () => {
+    toast('Uma alerta pra você!', {
+      toastId: `ID-info-light`,
+      type: 'error',
+      position: 'top-right',
+      autoClose: 5000,
+      theme: 'dark',
+    })
+  }
 
   return (
     <Container>
@@ -46,6 +56,7 @@ export default function Home() {
         name={`button-home`}
         attributes={{
           text: 'Enviar',
+          onClick: handleAlert,
           styleProps: {
             type: 'normal',
             buttonComponent: {
@@ -63,16 +74,6 @@ export default function Home() {
           placeholder: "Digite seu nome...",
           required: true,
           label: "Nome:",
-        }}
-      />
-      <Input
-        name={`input-home-2`}
-        attributes={{
-          setInputValue: setInputValue2,
-          value: inputValue2,
-          placeholder: "Digite seu sobrenome...",
-          required: true,
-          label: "Sobrenome:",
         }}
       />
     </Container>

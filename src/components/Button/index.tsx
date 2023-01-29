@@ -1,6 +1,5 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { FaArrowRight, FaArrowLeft, FaBackspace } from "react-icons/fa";
 import { ButtonComponent } from "./styled";
 import theme from "../../styles/theme";
 
@@ -11,13 +10,7 @@ import { Text } from '../';
 const Button: React.FC<IButtonProps> = ({ name, attributes }) => {
   const { onClick, text, icon, iconColor, loading, styleProps } = attributes;
 
-  const icons = {
-    "arrowRight": FaArrowRight,
-    "arrowLeft": FaArrowLeft,
-    "backSpace": FaBackspace,
-  }
-
-  const Icon: IconType = icons[icon as keyof IconType];
+  const Icon = icon as IconType;
 
   return (
     <ButtonComponent id={name} onClick={onClick} styleProps={styleProps} data-testid="button-component">

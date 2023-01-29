@@ -1,4 +1,5 @@
 import React from "react";
+import { IconType } from "react-icons";
 import { IDefaultProps, IStyleProps } from "../global";
 import { ButtonTypes } from "../../types";
 
@@ -9,7 +10,7 @@ interface IButtonStylesProps extends IStyleProps {
 interface IButtonAttributes {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   text?: string;
-  icon?: string;
+  icon?: IconType;
   iconColor?: string;
   loading?: boolean;
   styleProps?: IButtonStylesProps;

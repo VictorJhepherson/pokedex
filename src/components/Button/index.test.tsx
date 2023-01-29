@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { Button } from "../";
@@ -79,7 +80,7 @@ describe('Button: check html tags and render', () => {
       <Button
         name={`button-test`}
         attributes={{
-          icon: 'arrowRight',
+          icon: FaArrowRight,
           iconColor: 'white',
           styleProps: {
             type: 'circle',
@@ -99,7 +100,7 @@ describe('Button: check html tags and render', () => {
       <Button
         name={`button-test`}
         attributes={{
-          icon: 'arrowRight',
+          icon: FaArrowRight,
           styleProps: {
             type: 'circle',
             buttonComponent: {},
@@ -118,7 +119,7 @@ describe('Button: check html tags and render', () => {
       <Button
         name={`button-test`}
         attributes={{
-          icon: 'arrowRight',
+          icon: FaArrowRight,
           iconColor: 'white',
           styleProps: {
             type: 'circle',
