@@ -162,6 +162,7 @@ describe('Input: check html tags and render', () => {
           styleProps: {
             labelComponent: {
               flexDirection: 'column',
+              alignItems: 'center',
               justifyContent: 'center',
               width: '100%',
               marginTop: '10px',

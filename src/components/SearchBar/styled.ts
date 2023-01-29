@@ -11,7 +11,7 @@ export const Container = styled.div<IProps>`
   ${({ styleProps }) => css`
     display: flex;
     align-items: ${styleProps && styleProps.containerComponent.alignItems || 'center'};
-    justify-content: ${styleProps && styleProps.justifyContent || 'center'};
+    justify-content: ${styleProps && styleProps.containerComponent.justifyContent || 'center'};
 
     width: ${styleProps && styleProps.containerComponent.width || '100%'};
     height: ${styleProps && styleProps.containerComponent.height || '80px' };

@@ -11,6 +11,7 @@ export const Label = styled.label<IProps>`
   ${({ styleProps }) => css`
     display: flex;
     flex-direction: ${styleProps && styleProps.labelComponent.flexDirection || 'column'};
+    align-items: ${styleProps && styleProps.labelComponent.alignItems || 'center'};
     justify-content: ${styleProps && styleProps.labelComponent.justifyContent || 'center'};
 
     width: ${styleProps && styleProps.labelComponent.width || '100%'};
