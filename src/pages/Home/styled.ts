@@ -17,12 +17,3 @@ export const Container = styled.div`
     font-family: ${theme.font.fontFamily};
   `}
 `;
-
-export const Title = styled.h1`
-  ${() => css`
-    font-family: ${theme.font.fontFamily};
-    font-weight: bold;
-    font-size: ${theme.font.size.xxlarge};
-    margin-left: 20px;
-  `}
-`;
