@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Container } from "./styled";
 import theme from "../../styles/theme";
 
-import { SearchBar, Toggle, Text, Button, Input } from "../../components";
+import { SearchBar, Toggle, Text, Button, Input, Image } from "../../components";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
@@ -77,9 +77,23 @@ export default function Home() {
           styleProps: {
             labelComponent: {
               alignItems: 'flex-start',
+              width: '45%',
             },
             inputArea: {},
             inputComponent: {},
+          }
+        }}
+      />
+
+      <Image
+        name={`image-home`}
+        attributes={{
+          src: 'assets/img/logo.svg',
+          styleProps: {
+            hasHover: true,
+            imageComponent: {
+              cursor: 'pointer',
+            }
           }
         }}
       />
