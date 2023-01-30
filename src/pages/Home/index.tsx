@@ -74,6 +74,13 @@ export default function Home() {
           placeholder: "Digite seu nome...",
           required: true,
           label: "Nome:",
+          styleProps: {
+            labelComponent: {
+              alignItems: 'flex-start',
+            },
+            inputArea: {},
+            inputComponent: {},
+          }
         }}
       />
     </Container>
