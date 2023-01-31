@@ -17,6 +17,7 @@ export const CardComponent = styled.div<IProps>`
     width: ${styleProps && styleProps.cardComponent.width || '300px'};
     height: ${styleProps && styleProps.cardComponent.height || '400px'};
     margin-top: ${styleProps && styleProps.cardComponent.marginTop || '30px'};
+    margin-bottom: ${styleProps && styleProps.cardComponent.marginBottom || '0'};
 
     border-radius: ${styleProps && styleProps.cardComponent.borderRadius || '20px'};
 
@@ -40,6 +41,8 @@ export const CardComponent = styled.div<IProps>`
 
       border-top-left-radius: ${styleProps && styleProps.imageCard.borderTopLeftRadius || '20px'};
       border-top-right-radius: ${styleProps && styleProps.imageCard.borderTopRightRadius || '20px'};
+      border-bottom-left-radius: ${styleProps && styleProps.imageCard.borderBottomLeftRadius || '0'};
+      border-bottom-right-radius: ${styleProps && styleProps.imageCard.borderBottomRightRadius || '0'};
 
       background-color: ${styleProps && styleProps.imageCard.backgroundColor || theme.colors.primary};
 

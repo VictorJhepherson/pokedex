@@ -142,6 +142,57 @@ export default function Home() {
           })}
         </>
       </List>
+
+      <Card
+        name={`card-home`}
+        attributes={{
+          styleProps: {
+            hasHover: true,
+            cardComponent: {
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+              width: '60%',
+              marginBottom: '30px',
+            },
+            imageCard: {
+              width: '40%',
+              height: '100%',
+              borderTopRightRadius: '0',
+              borderBottomLeftRadius: '20px'
+            },
+          }
+        }}
+      >
+        <>
+          <Image
+            name={`image-card`}
+            attributes={{
+              src: 'assets/img/logo.svg',
+              styleProps: {
+                hasHover: false,
+                imageComponent: {}
+              }
+            }}
+          />
+
+          <Text
+            name={"text-card"}
+            attributes={{
+              text: "React Default Project",
+              styleProps: {
+                textComponent: {
+                  fontFamily: theme.font.fontFamily,
+                  fontSize: theme.font.size.small,
+                  fontWeight: theme.font.bold,
+                  color: theme.colors.black,
+                  margin: '30px'
+                }
+              }
+            }}
+          />
+        </>
+      </Card>
     </Container>
   );
 }
