@@ -42,6 +42,8 @@ export const CardComponent = styled.div<IProps>`
       border-top-right-radius: ${styleProps && styleProps.imageCard.borderTopRightRadius || '20px'};
 
       background-color: ${styleProps && styleProps.imageCard.backgroundColor || theme.colors.primary};
+
+      cursor: ${styleProps && styleProps.imageCard.cursor || 'pointer'};
     }
   `}
 `;

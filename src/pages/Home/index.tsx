@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Container } from "./styled";
 import theme from "../../styles/theme";
 
-import { SearchBar, Toggle, Text, Button, Input, Image, Card, List } from "../../components";
+import { SearchBar, Toggle, Text, Button, Input, Image, Card, List, Header } from "../../components";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
@@ -21,7 +21,14 @@ export default function Home() {
   }
 
   return (
-    <Container>
+    <Container data-testid="home-screen">
+      <Header
+        name={`header-home`}
+        attributes={{
+          logoPath: 'assets/img/logo.svg',
+        }}
+      />
+
       <Text
         name={"title-home"}
         attributes={{

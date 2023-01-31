@@ -6,3 +6,4 @@ export * from "./components/Input";
 export * from "./components/Image";
 export * from "./components/Card";
 export * from "./components/List";
+export * from "./components/Header";

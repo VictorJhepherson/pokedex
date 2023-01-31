@@ -9,7 +9,6 @@ export const Container = styled.div`
     flex-direction: column;
 
     width: 100%;
-    padding: 20px;
     min-height: 100vh;
 
     background-color: ${theme.colors.white};
