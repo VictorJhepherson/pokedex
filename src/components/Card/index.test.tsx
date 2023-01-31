@@ -37,6 +37,7 @@ describe('Card: check html tags and render', () => {
               cursor: 'pointer',
               transition: '0.6s ease-in-out',
               transform: 'scale(1.09)',
+              position: 'static',
             },
             imageCard: {
               width: '100%',
@@ -73,12 +74,15 @@ describe('Card: check html tags and render', () => {
               backgroundColor: `${theme.colors.white}`,
               cursor: 'pointer',
               transition: '0.6s ease-in-out',
+              position: 'static',
             },
             imageCard: {
               width: '100%',
               height: '70%',
               borderTopLeftRadius: '20px',
               borderTopRightRadius: '20px',
+              borderBottomLeftRadius: '0',
+              borderBottomRightRadius: '0',
               backgroundColor: `${theme.colors.primary}`,
             }
           }

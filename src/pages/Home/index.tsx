@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { Container } from "./styled";
 import theme from "../../styles/theme";
@@ -154,6 +155,7 @@ export default function Home() {
               justifyContent: 'flex-start',
               width: '60%',
               marginBottom: '30px',
+              position: 'relative',
             },
             imageCard: {
               width: '40%',
@@ -165,6 +167,21 @@ export default function Home() {
         }}
       >
         <>
+          <Button
+            name={`card-home-button`}
+            attributes={{
+              icon: FaArrowLeft,
+              styleProps: {
+                type: 'circle',
+                buttonComponent: {
+                  position: 'absolute',
+                  left: '-10px',
+                  top: '10px',
+                }
+              }
+            }}
+          />
+
           <Image
             name={`image-card`}
             attributes={{

@@ -22,6 +22,12 @@ export const ButtonComponent = styled.button<IProps>`
       transform: ${styleProps && styleProps.buttonComponent.transform || 'scale(1.09)'};
     }
 
+    position: ${styleProps && styleProps.buttonComponent.position || 'static'};
+    left: ${styleProps && styleProps.buttonComponent.left || 'auto'};
+    right: ${styleProps && styleProps.buttonComponent.right || 'auto'};
+    bottom: ${styleProps && styleProps.buttonComponent.bottom || 'auto'};
+    top: ${styleProps && styleProps.buttonComponent.top || 'auto'};
+
     ${styleProps && styleProps.type === "circle" ? css`
         width: ${styleProps && styleProps.buttonComponent.width || '40px' };
         height: ${styleProps && styleProps.buttonComponent.height || '40px' };

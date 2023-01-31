@@ -29,6 +29,8 @@ export const CardComponent = styled.div<IProps>`
     cursor: ${styleProps && styleProps.cardComponent.cursor || 'pointer'};
     transition: ${styleProps && styleProps.cardComponent.transition || '0.6s ease-in-out'};
 
+    position: ${styleProps && styleProps.cardComponent.position || 'static'};
+
     ${styleProps && styleProps.hasHover && css`
       &:hover {
         transform: ${styleProps && styleProps.cardComponent.transform || 'scale(1.09)'};
