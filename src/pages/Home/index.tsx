@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Container } from "./styled";
 import theme from "../../styles/theme";
 
-import { SearchBar, Toggle, Text, Button, Input, Image } from "../../components";
+import { SearchBar, Toggle, Text, Button, Input, Image, Card } from "../../components";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
@@ -85,18 +85,44 @@ export default function Home() {
         }}
       />
 
-      <Image
-        name={`image-home`}
+      <Card
+        name={`card-home`}
         attributes={{
-          src: 'assets/img/logo.svg',
           styleProps: {
             hasHover: true,
-            imageComponent: {
-              cursor: 'pointer',
-            }
+            cardComponent: {},
+            imageCard: {},
           }
         }}
-      />
+      >
+        <>
+          <Image
+            name={`image-card`}
+            attributes={{
+              src: 'assets/img/logo.svg',
+              styleProps: {
+                hasHover: false,
+                imageComponent: {}
+              }
+            }}
+          />
+
+          <Text
+            name={"text-card"}
+            attributes={{
+              text: "React Default Project",
+              styleProps: {
+                textComponent: {
+                  fontFamily: theme.font.fontFamily,
+                  fontSize: theme.font.size.small,
+                  fontWeight: theme.font.bold,
+                  color: theme.colors.black,
+                }
+              }
+            }}
+          />
+        </>
+      </Card>
     </Container>
   );
 }
