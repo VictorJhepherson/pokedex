@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { Container } from "./styled";
 import theme from "../../styles/theme";
 
-import { SearchBar, Toggle, Text, Button, Input, Image, Card } from "../../components";
+import { SearchBar, Toggle, Text, Button, Input, Image, Card, List } from "../../components";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState("");
@@ -85,44 +85,56 @@ export default function Home() {
         }}
       />
 
-      <Card
-        name={`card-home`}
-        attributes={{
-          styleProps: {
-            hasHover: true,
-            cardComponent: {},
-            imageCard: {},
-          }
-        }}
+      <List
+        name={`list-home`}
+        attributes={{}}
       >
         <>
-          <Image
-            name={`image-card`}
-            attributes={{
-              src: 'assets/img/logo.svg',
-              styleProps: {
-                hasHover: false,
-                imageComponent: {}
-              }
-            }}
-          />
+          {Array.from({ length: 8 }, (index: number) => {
+            return (
+              <Card
+                key={index}
+                name={`card-home`}
+                attributes={{
+                  styleProps: {
+                    hasHover: true,
+                    cardComponent: {},
+                    imageCard: {},
+                  }
+                }}
+              >
+                <>
+                  <Image
+                    name={`image-card`}
+                    attributes={{
+                      src: 'assets/img/logo.svg',
+                      styleProps: {
+                        hasHover: false,
+                        imageComponent: {}
+                      }
+                    }}
+                  />
 
-          <Text
-            name={"text-card"}
-            attributes={{
-              text: "React Default Project",
-              styleProps: {
-                textComponent: {
-                  fontFamily: theme.font.fontFamily,
-                  fontSize: theme.font.size.small,
-                  fontWeight: theme.font.bold,
-                  color: theme.colors.black,
-                }
-              }
-            }}
-          />
+                  <Text
+                    name={"text-card"}
+                    attributes={{
+                      text: "React Default Project",
+                      styleProps: {
+                        textComponent: {
+                          fontFamily: theme.font.fontFamily,
+                          fontSize: theme.font.size.small,
+                          fontWeight: theme.font.bold,
+                          color: theme.colors.black,
+                        }
+                      }
+                    }}
+                  />
+                </>
+              </Card>
+            )
+          })}
         </>
-      </Card>
+      </List>
     </Container>
   );
 }

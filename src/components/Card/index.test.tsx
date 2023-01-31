@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { Card } from "../";
 import theme from "../../styles/theme";
 
-describe('Button: check html tags and render', () => {
+describe('Card: check html tags and render', () => {
   it('should be rendered as default', () => {
     render(
       <Card
