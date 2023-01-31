@@ -1,4 +1,3 @@
-import React from "react";
 import { IDefaultProps, IStyleProps } from "../global";
 
 interface IListAttributes {

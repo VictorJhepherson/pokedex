@@ -1,10 +1,8 @@
-import React from "react";
 import { IDefaultProps, IStyleProps } from "../global";
 
 interface IImageStyleProps extends IStyleProps {
   hasHover: boolean;
 }
-
 
 interface IImageAttributes {
   src: string;
