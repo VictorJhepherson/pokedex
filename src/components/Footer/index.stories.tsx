@@ -17,3 +17,17 @@ FooterComponent.args = {
     text: 'Test',
   }
 }
+
+export const FooterWithChildren = Template.bind({});
+FooterWithChildren.args = {
+  name: 'footer-stories',
+  attributes: {
+    text: 'Test',
+    styleProps: {
+      footerComponent: {
+        justifyContent: 'space-around'
+      }
+    }
+  },
+  children: <span>Hello World!</span>
+}

@@ -51,4 +51,20 @@ describe('Footer: check html tags and render', () => {
 
     expect(screen.getByTestId("footer-component")).toBeInTheDocument();
   })
+
+  it('should be rendered with children', () => {
+    render(
+      <Footer
+        name={`footer-test`}
+        attributes={{
+          text: 'test',
+        }}
+      >
+        <span data-testid="span-test">Hello World!</span>
+      </Footer>
+    )
+
+    expect(screen.getByTestId("footer-component")).toBeInTheDocument();
+    expect(screen.getByTestId("span-test")).toBeInTheDocument();
+  })
 })

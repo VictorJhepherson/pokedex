@@ -6,7 +6,7 @@ import { IFooterProps } from "../../interfaces";
 
 import { Text } from "../";
 
-const Footer: React.FC<IFooterProps> = ({ name, attributes }) => {
+const Footer: React.FC<IFooterProps> = ({ name, attributes, children }) => {
   const { text, styleProps } = attributes;
 
   const getDate = () => {
@@ -15,20 +15,24 @@ const Footer: React.FC<IFooterProps> = ({ name, attributes }) => {
 
   return (
     <FooterComponent id={name} styleProps={styleProps} data-testid="footer-component">
-      <Text
-        name={`text-footer`}
-        attributes={{
-          text: text ? `Copyright © ${getDate()} ${text}` : '',
-          styleProps: {
-            textComponent: {
-              fontFamily: theme.font.fontFamily,
-              fontSize: theme.font.size.small,
-              fontWeight: theme.font.bold,
-              color: theme.colors.black,
+      <>
+        <Text
+          name={`text-footer`}
+          attributes={{
+            text: text ? `Copyright © ${getDate()} ${text}` : '',
+            styleProps: {
+              textComponent: {
+                fontFamily: theme.font.fontFamily,
+                fontSize: theme.font.size.small,
+                fontWeight: theme.font.bold,
+                color: theme.colors.black,
+              }
             }
-          }
-        }}
-      />
+          }}
+        />
+
+        {children ? children : <></>}
+      </>
     </FooterComponent>
   )
 }
