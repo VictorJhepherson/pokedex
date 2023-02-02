@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# react-default-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [Descrição](#1-descrição)
+2. [Inicio rápido](#2-inicio-rápido)
+3. [Componentes](#3-componentes)
+4. [Pages](#4-pages)
 
-## Available Scripts
+## 1. Descrição
 
-In the project directory, you can run:
+O react-default-project é um projeto React + TypeScript criado para ser a base de outros projetos, com components básicos já criados, configurações, testes e documentações geradas para facilitar o desenvolvimento do projeto.
 
-### `npm start`
+Este projeto é codificado em [Javascript](<https://developer.mozilla.org/pt-BR/docs/Web/JavaScript>) e utiliza as tecnologias [React](<https://pt-br.reactjs.org/>) e [TypeScript](<https://www.typescriptlang.org/>).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 2. Inicio rápido
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Para executar o projeto, deve-se executar os comandos dentro do diretório raiz do projeto [/src].
 
-### `npm test`
+O primeiro comando irá instalar todas as dependências necessárias para a execução do projeto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+``` bash
+npm install ou npm i
+```
 
-### `npm run build`
+O segundo comando realizará a execução deste projeto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+``` bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Após executar este segundo comando abrirá um link no seu navegador, porém, caso não abra o link será:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+http://localhost:3000/
+```
 
-### `npm run eject`
+Para executar os testes da aplicação será necessário executar o seguinte comenado:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+``` bash
+npm run test ou npm run test:coverage
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A diferença entre os comandos de teste é que o :coverage mostrará a cobertura dos testes que para acessar basta ir na pasta /coverage/Icov-report e rodar o index.html.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para executar o storybook será necessário executar o seguinte comando:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+``` bash
+npm run storybook
+```
 
-## Learn More
+Após executar este comando abrirá um link no seu navegador, porém, caso não abra o link será:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+http://localhost:6006/
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 3. Componentes
+
+Este site possui os seguintes componentes:
+
+| Componente      | Descrição               | Caminho                                          |
+| --------------- | ----------------------- | ------------------------------------------------ |
+| **_Button_**    | Componente de Button    | <react-default-project/src/components/Button>    |
+| **_Card_**      | Componente de Card      | <react-default-project/src/components/Card>      |
+| **_Header_**    | Componente de Header    | <react-default-project/src/components/Header>    |
+| **_Image_**     | Componente de Image     | <react-default-project/src/components/Image>     |
+| **_Input_**     | Componente de Input     | <react-default-project/src/components/Input>     |
+| **_List_**      | Componente de List      | <react-default-project/src/components/List>      |
+| **_SearchBar_** | Componente de SearchBar | <react-default-project/src/components/SearchBar> |
+| **_Text_**      | Componente de Text      | <react-default-project/src/components/Text>      |
+| **_Toggle_**    | Componente de Toggle    | <react-default-project/src/components/Toggle>    |
+
+
+## 4. Pages
+
+
+Este site possui as seguites paginas:
+
+| Pagina     | Descrição      | Caminho                                |
+| ---------- | -------------- | -------------------------------------- |
+| **_Home_** | Pagina de Home | <react-default-project/src/pages/Home> |
