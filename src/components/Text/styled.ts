@@ -12,7 +12,7 @@ export const TextComponent = styled.h1<IProps>`
     font-size: ${styleProps && styleProps.textComponent.fontSize || theme.font.size.medium};
     font-weight: ${styleProps && styleProps.textComponent.fontWeight || 'normal'};
 
-    margin: ${styleProps && styleProps.textComponent.margin || 'none'};
+    margin: ${styleProps && styleProps.textComponent.margin || '0'};
 
     color: ${styleProps && styleProps.textComponent.color || theme.colors.black};
   `}

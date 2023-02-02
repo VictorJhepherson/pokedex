@@ -24,4 +24,22 @@ describe('Home Screen: check html tags and render', () => {
 
     expect(screen.getByTestId("home-screen")).toBeInTheDocument();
   })
+
+  it('should be rendered with click on Header', () => {
+    Object.defineProperty(window, 'location', {
+      value: {
+        reload: jest.fn(),
+      }
+    });
+
+    const { container } = render(
+      <Home />
+    )
+
+    const imageHeader = container.querySelector("div")?.querySelector("#header-home")?.querySelector("img") as HTMLElement;
+
+    fireEvent.click(imageHeader);
+
+    expect(screen.getByTestId("home-screen")).toBeInTheDocument();
+  })
 })

@@ -9,12 +9,32 @@ describe('Toggle: check html tags and render', () => {
       <Toggle
         name={`toggle-test`}
         attributes={{
+          textOff: 'Off',
+          textOn: 'On',
           toggleOn: false,
           setToggleOn: jest.fn(),
         }}
       />
     )
 
+    expect(screen.getByTestId("toggle-container")).toBeInTheDocument();
+    expect(screen.getByTestId("toggle-switch")).toBeInTheDocument();
+    expect(screen.getByTestId("toggle-input")).toBeInTheDocument();
+    expect(screen.getByTestId("toggle-slider")).toBeInTheDocument();
+  })
+
+  it('should be rendered without textOff and textOn', () => {
+    render(
+      <Toggle
+        name={`toggle-test`}
+        attributes={{
+          toggleOn: false,
+          setToggleOn: jest.fn(),
+        }}
+      />
+    )
+
+    expect(screen.getByTestId("toggle-container")).toBeInTheDocument();
     expect(screen.getByTestId("toggle-switch")).toBeInTheDocument();
     expect(screen.getByTestId("toggle-input")).toBeInTheDocument();
     expect(screen.getByTestId("toggle-slider")).toBeInTheDocument();
@@ -27,6 +47,8 @@ describe('Toggle: check html tags and render', () => {
       <Toggle
         name={`toggle-test`}
         attributes={{
+          textOff: 'Off',
+          textOn: 'On',
           toggleOn: false,
           setToggleOn: spy,
         }}
@@ -44,9 +66,16 @@ describe('Toggle: check html tags and render', () => {
       <Toggle
         name={`toggle-test`}
         attributes={{
+          textOff: 'Off',
+          textOn: 'On',
           toggleOn: false,
           setToggleOn: jest.fn(),
           styleProps: {
+            toggleContainer: {
+              alignItems: 'center',
+              justifyContent: 'space-around',
+              width: '200px',
+            },
             toggleSwitch: {
               width: '36px',
               height: '22px',
@@ -77,6 +106,7 @@ describe('Toggle: check html tags and render', () => {
       />
     )
 
+    expect(screen.getByTestId("toggle-container")).toBeInTheDocument();
     expect(screen.getByTestId("toggle-switch")).toBeInTheDocument();
     expect(screen.getByTestId("toggle-input")).toBeInTheDocument();
     expect(screen.getByTestId("toggle-slider")).toBeInTheDocument();

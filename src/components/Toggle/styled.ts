@@ -7,6 +7,16 @@ interface IProps {
   styleProps?: IStyleProps;
 }
 
+export const ToggleContainer = styled.div<IProps>`
+  ${({ styleProps }) => css`
+    display: flex;
+    align-items: ${styleProps && styleProps.toggleContainer.alignItems || 'center'};
+    justify-content: ${styleProps && styleProps.toggleContainer.justifyContent || 'space-around'};
+
+    width: ${styleProps && styleProps.toggleContainer.width || '200px'};
+  `}
+`;
+
 export const ToggleSwitch = styled.label<IProps>`
   ${({ styleProps }) => css`
     position: relative;

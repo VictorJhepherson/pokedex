@@ -62,6 +62,25 @@ describe('Header: check html tags and render', () => {
     expect(screen.getByRole("img")).toHaveAttribute("id", "image-header-test");
   })
 
+  it('should be rendered with onClick', () => {
+    Object.defineProperty(window, 'location', {
+      value: {
+        reload: jest.fn(),
+      }
+    });
+
+    render(
+      <Header
+        name={`header-test`}
+        attributes={{
+          onClick: () => window.location.reload(),
+        }}
+      />
+    )
+
+    expect(screen.getByTestId("header-component")).toBeInTheDocument();
+  })
+
   it('should be rendered with all styleProps', () => {
     render(
       <Header

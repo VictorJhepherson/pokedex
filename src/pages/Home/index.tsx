@@ -26,6 +26,7 @@ export default function Home() {
       <Header
         name={`header-home`}
         attributes={{
+          onClick: () => window.location.reload(),
           logoPath: 'assets/img/logo.svg',
         }}
       />
@@ -55,6 +56,8 @@ export default function Home() {
       <Toggle
         name={"toggle"}
         attributes={{
+          textOff: 'Off',
+          textOn: 'On',
           toggleOn: toggleOn,
           setToggleOn: setToggleOn,
         }}
@@ -98,7 +101,7 @@ export default function Home() {
         attributes={{}}
       >
         <>
-          {Array.from({ length: 8 }, (index: number) => {
+          {Array.from({ length: 8 }, (element, index: number) => {
             return (
               <Card
                 key={index}

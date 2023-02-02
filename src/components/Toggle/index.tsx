@@ -1,28 +1,71 @@
 import React from "react";
-import { ToggleSwitch, ToggleInput, ToggleSlider } from "./styled";
+import { ToggleContainer, ToggleSwitch, ToggleInput, ToggleSlider } from "./styled";
+import theme from "../../styles/theme";
 
 import { IToggleProps } from "../../interfaces";
 
+import { Text } from "../";
+
 const Toggle: React.FC<IToggleProps> = ({ name, attributes }) => {
-  const { toggleOn, setToggleOn, styleProps } = attributes;
+  const {toggleOn, setToggleOn, textOn, textOff, styleProps } = attributes;
 
   const handleToggleOn = () => {
     setToggleOn(!toggleOn);
   }
 
   return (
-    <ToggleSwitch id={name} styleProps={styleProps} data-testid="toggle-switch">
-      <ToggleInput
-        id={`toggle-input`}
-        type={`checkbox`}
-        checked={toggleOn}
-        onClick={handleToggleOn}
-        styleProps={styleProps}
-        data-testid="toggle-input"
-      />
+    <ToggleContainer id={name} styleProps={styleProps} data-testid="toggle-container">
+      {textOff ?
+        <Text
+          name={`text-toggle-off`}
+          attributes={{
+            text: textOff,
+            styleProps: {
+              textComponent: {
+                fontFamily: theme.font.fontFamily,
+                fontSize: theme.font.size.small,
+                fontWeight: theme.font.bold,
+                color: theme.colors.black,
+              }
+            }
+          }}
+        />
+        :
+        <></>
+      }
 
-      <ToggleSlider id={`toggle-slider`} styleProps={styleProps} data-testid="toggle-slider" />
-    </ToggleSwitch>
+      <ToggleSwitch id={`${name}-toggle-switch`} styleProps={styleProps} data-testid="toggle-switch">
+        <ToggleInput
+          id={`toggle-input`}
+          type={`checkbox`}
+          checked={toggleOn}
+          onChange={handleToggleOn}
+          styleProps={styleProps}
+          data-testid="toggle-input"
+        />
+
+        <ToggleSlider id={`toggle-slider`} styleProps={styleProps} data-testid="toggle-slider" />
+      </ToggleSwitch>
+
+      {textOn ?
+        <Text
+          name={`text-toggle-on`}
+          attributes={{
+            text: textOn,
+            styleProps: {
+              textComponent: {
+                fontFamily: theme.font.fontFamily,
+                fontSize: theme.font.size.small,
+                fontWeight: theme.font.bold,
+                color: theme.colors.black,
+              }
+            }
+          }}
+        />
+        :
+        <></>
+      }
+    </ToggleContainer>
   )
 }
 

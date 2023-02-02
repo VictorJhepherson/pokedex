@@ -12,6 +12,8 @@ const Template: ComponentStory<typeof Toggle> = (args) => {
   const [toggleOn, setToggleOn] = useState(true);
 
   const attributes = {
+    textOff: 'Off',
+    textOn: 'On',
     setToggleOn: setToggleOn,
     toggleOn: toggleOn,
   };

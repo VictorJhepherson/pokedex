@@ -6,7 +6,7 @@ import { IHeaderProps } from "../../interfaces";
 import { Image } from "../";
 
 const Header: React.FC<IHeaderProps> = ({ name, attributes, children }) => {
-  const { logoPath, styleProps } = attributes;
+  const { onClick, logoPath, styleProps } = attributes;
 
   return (
     <HeaderComponent id={name} styleProps={styleProps} data-testid="header-component">
@@ -16,7 +16,7 @@ const Header: React.FC<IHeaderProps> = ({ name, attributes, children }) => {
             name={`image-${name}`}
             attributes={{
               src: logoPath,
-              onClick: () => window.location.reload(),
+              onClick: onClick,
             }}
           />
         }

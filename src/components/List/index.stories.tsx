@@ -18,5 +18,5 @@ ListComponent.args = {
       listComponent: {}
     }
   },
-  children: Array.from({ length: 14 }, (index: number) => <span key={index} style={{ marginBottom: '10px' }}>{`Hello World ${index}`}</span>),
+  children: Array.from({ length: 23 }, (element, index: number) => <span key={index} style={{ marginBottom: '10px' }}>{`Hello World ${index}`}</span>),
 }
