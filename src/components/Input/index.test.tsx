@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
+import theme from "../../styles/theme";
 import { Input } from "../";
 
 describe('Input: check html tags and render', () => {
@@ -180,6 +181,13 @@ describe('Input: check html tags and render', () => {
               border: 'none',
               boxShadow: '0 0 0 0',
             },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+              margin: 'none',
+            }
           },
         }}
       />

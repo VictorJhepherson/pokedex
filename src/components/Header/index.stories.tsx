@@ -20,7 +20,8 @@ HeaderComponent.args = {
       imageHeader: {
         width: '60px',
         height: '60px',
-      }
+      },
+      imageComponent: {},
     }
   }
 }
@@ -31,7 +32,8 @@ HeaderWithOutLogo.args = {
   attributes: {
     styleProps: {
       headerComponent: {},
-      imageHeader: {}
+      imageHeader: {},
+      imageComponent: {},
     }
   }
 }
@@ -43,7 +45,8 @@ HeaderWithoutLogoAndHasChildren.args = {
   attributes: {
     styleProps: {
       headerComponent: {},
-      imageHeader: {}
+      imageHeader: {},
+      imageComponent: {},
     }
   },
   children: <span>Hello World!</span>

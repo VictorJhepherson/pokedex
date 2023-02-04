@@ -18,17 +18,7 @@ const SearchBar: React.FC<ISearchBarProps> = ({ name, attributes }) => {
           placeholder: "Faça sua busca...",
           required: true,
           hasSearchButton: true,
-          styleProps: {
-            labelComponent: {
-              marginTop: '0',
-            },
-            inputArea: {
-              width: '65%',
-            },
-            inputComponent: {
-              width: '65%',
-            }
-          }
+          styleProps: styleProps
         }}
       />
     </Container>

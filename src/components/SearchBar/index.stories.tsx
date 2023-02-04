@@ -14,6 +14,12 @@ const Template: ComponentStory<typeof SearchBar> = (args) => {
   const attributes = {
     setSearchValue: setInputValue,
     searchValue: inputValue,
+    styleProps: {
+      containerComponent: {},
+      labelComponent: {},
+      inputArea: {},
+      inputComponent: {}
+    }
   };
 
 

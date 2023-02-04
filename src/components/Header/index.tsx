@@ -17,6 +17,10 @@ const Header: React.FC<IHeaderProps> = ({ name, attributes, children }) => {
             attributes={{
               src: logoPath,
               onClick: onClick,
+              styleProps: {
+                hasHover: false,
+                ...styleProps
+              }
             }}
           />
         }

@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import theme from "../../styles/theme";
 import { SearchBar } from "../";
 
 describe('SearchBar: check html tags and render', () => {
@@ -34,6 +35,33 @@ describe('SearchBar: check html tags and render', () => {
               height: '80px',
               padding: '20px',
               backgroundColor: 'transparent',
+            },
+            labelComponent: {
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              marginTop: '10px',
+            },
+            inputArea: {
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              backgroundColor: 'transparent',
+            },
+            inputComponent: {
+              padding: '1rem',
+              backgroundColor: '#DFDFDF',
+              borderRadius: '20px',
+              border: 'none',
+              boxShadow: '0 0 0 0',
+            },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+              margin: 'none',
             }
           }
         }}

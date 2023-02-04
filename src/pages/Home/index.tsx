@@ -28,6 +28,11 @@ export default function Home() {
         attributes={{
           onClick: () => window.location.reload(),
           logoPath: 'assets/img/logo.svg',
+          styleProps: {
+            headerComponent: {},
+            imageHeader: {},
+            imageComponent: {},
+          }
         }}
       />
 
@@ -50,6 +55,18 @@ export default function Home() {
         attributes={{
           searchValue: searchValue,
           setSearchValue: setSearchValue,
+          styleProps: {
+            containerComponent: {},
+            labelComponent: {
+              marginTop: '0',
+            },
+            inputArea: {
+              width: '65%',
+            },
+            inputComponent: {
+              width: '65%',
+            }
+          }
         }}
       />
 
@@ -60,6 +77,18 @@ export default function Home() {
           textOn: 'On',
           toggleOn: toggleOn,
           setToggleOn: setToggleOn,
+          styleProps: {
+            toggleContainer: {},
+            toggleSwitch: {},
+            toggleInput: {},
+            toggleSlider: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
+          }
         }}
       />
 
@@ -72,6 +101,12 @@ export default function Home() {
             type: 'normal',
             buttonComponent: {
               marginTop: '20px',
+            },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.medium,
+              fontWeight: theme.font.bold,
+              color: theme.colors.white,
             }
           }
         }}
@@ -92,6 +127,13 @@ export default function Home() {
             },
             inputArea: {},
             inputComponent: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+              margin: 'none',
+            }
           }
         }}
       />
@@ -218,6 +260,15 @@ export default function Home() {
         name="footer-home"
         attributes={{
           text: process.env.REACT_APP_AUTHOR || 'Victor Jhepherson',
+          styleProps: {
+            footerComponent: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
+          }
         }}
       />
     </Container>

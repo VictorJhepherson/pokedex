@@ -1,6 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen, fireEvent } from "@testing-library/react";
+import theme from "../../styles/theme";
 import { Toggle } from "../";
 
 describe('Toggle: check html tags and render', () => {
@@ -100,6 +101,12 @@ describe('Toggle: check html tags and render', () => {
               transition: '0.4s',
               border: '2px solid #DFDFDF',
               boxSizing: 'border-box',
+            },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
             }
           },
         }}

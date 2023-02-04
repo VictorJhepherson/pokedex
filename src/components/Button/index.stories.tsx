@@ -18,7 +18,8 @@ NormalButton.args = {
     text: 'Stories',
     styleProps: {
       type: 'normal',
-      buttonComponent: {}
+      buttonComponent: {},
+      textComponent: {}
     }
   }
 }
@@ -30,7 +31,8 @@ CircleButton.args = {
     icon: FaArrowRight,
     styleProps: {
       type: 'circle',
-      buttonComponent: {}
+      buttonComponent: {},
+      textComponent: {}
     }
   }
 }

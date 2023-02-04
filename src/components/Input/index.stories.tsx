@@ -14,6 +14,12 @@ const Template: ComponentStory<typeof Input> = (args) => {
   const attributes = {
     setInputValue: setInputValue,
     value: inputValue,
+    styleProps: {
+      labelComponent: {},
+      inputArea: {},
+      inputComponent: {},
+      textComponent: {}
+    }
   };
 
 

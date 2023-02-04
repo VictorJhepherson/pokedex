@@ -20,14 +20,7 @@ const Toggle: React.FC<IToggleProps> = ({ name, attributes }) => {
           name={`text-toggle-off`}
           attributes={{
             text: textOff,
-            styleProps: {
-              textComponent: {
-                fontFamily: theme.font.fontFamily,
-                fontSize: theme.font.size.small,
-                fontWeight: theme.font.bold,
-                color: theme.colors.black,
-              }
-            }
+            styleProps: styleProps
           }}
         />
         :
@@ -52,14 +45,7 @@ const Toggle: React.FC<IToggleProps> = ({ name, attributes }) => {
           name={`text-toggle-on`}
           attributes={{
             text: textOn,
-            styleProps: {
-              textComponent: {
-                fontFamily: theme.font.fontFamily,
-                fontSize: theme.font.size.small,
-                fontWeight: theme.font.bold,
-                color: theme.colors.black,
-              }
-            }
+            styleProps: styleProps
           }}
         />
         :

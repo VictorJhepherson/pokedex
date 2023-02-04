@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import theme from "../../styles/theme";
 import { Button } from "../";
 
 describe('Button: check html tags and render', () => {
@@ -14,6 +15,12 @@ describe('Button: check html tags and render', () => {
           styleProps: {
             type: 'normal',
             buttonComponent: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
           }
         }}
       />
@@ -49,6 +56,12 @@ describe('Button: check html tags and render', () => {
               fontFamily: 'Silkscreen',
               color: '#FFFFFF',
             },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
           }
         }}
       />
@@ -66,6 +79,12 @@ describe('Button: check html tags and render', () => {
           styleProps: {
             type: 'normal',
             buttonComponent: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
           }
         }}
       />
@@ -85,6 +104,12 @@ describe('Button: check html tags and render', () => {
           styleProps: {
             type: 'circle',
             buttonComponent: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
           }
         }}
       />
@@ -104,6 +129,12 @@ describe('Button: check html tags and render', () => {
           styleProps: {
             type: 'circle',
             buttonComponent: {},
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
+            }
           }
         }}
       />
@@ -145,6 +176,12 @@ describe('Button: check html tags and render', () => {
               boxShadow: '0 0 0 0',
               fontFamily: 'Silkscreen',
               color: '#FFFFFF',
+            },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
             }
           }
         }}

@@ -20,14 +20,7 @@ const Footer: React.FC<IFooterProps> = ({ name, attributes, children }) => {
           name={`text-footer`}
           attributes={{
             text: text ? `Copyright © ${getDate()} ${text}` : '',
-            styleProps: {
-              textComponent: {
-                fontFamily: theme.font.fontFamily,
-                fontSize: theme.font.size.small,
-                fontWeight: theme.font.bold,
-                color: theme.colors.black,
-              }
-            }
+            styleProps: styleProps,
           }}
         />
 

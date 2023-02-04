@@ -43,6 +43,12 @@ describe('Footer: check html tags and render', () => {
               height: '80px',
               padding: '20px',
               backgroundColor: theme.colors.transparent,
+            },
+            textComponent: {
+              fontFamily: theme.font.fontFamily,
+              fontSize: theme.font.size.small,
+              fontWeight: theme.font.bold,
+              color: theme.colors.black,
             }
           }
         }}

@@ -22,6 +22,16 @@ describe('Header: check html tags and render', () => {
         name={`header-test`}
         attributes={{
           logoPath: 'assets/img/logo.svg',
+          styleProps: {
+            headerComponent: {},
+            imageHeader: {},
+            imageComponent: {
+              width: '100px',
+              height: '100px',
+              cursor: 'pointer',
+              transition: '0.6s ease-in-out',
+            },
+          }
         }}
       />
     )
@@ -50,6 +60,16 @@ describe('Header: check html tags and render', () => {
         name={`header-test`}
         attributes={{
           logoPath: 'assets/img/logo.svg',
+          styleProps: {
+            headerComponent: {},
+            imageHeader: {},
+            imageComponent: {
+              width: '100px',
+              height: '100px',
+              cursor: 'pointer',
+              transition: '0.6s ease-in-out',
+            },
+          }
         }}
       />
     )
@@ -99,7 +119,13 @@ describe('Header: check html tags and render', () => {
               width: '40px',
               height: '40px',
               cursor: 'pointer',
-            }
+            },
+            imageComponent: {
+              width: '100px',
+              height: '100px',
+              cursor: 'pointer',
+              transition: '0.6s ease-in-out',
+            },
           }
         }}
       />

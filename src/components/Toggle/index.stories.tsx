@@ -16,6 +16,13 @@ const Template: ComponentStory<typeof Toggle> = (args) => {
     textOn: 'On',
     setToggleOn: setToggleOn,
     toggleOn: toggleOn,
+    styleProps: {
+      toggleContainer: {},
+      toggleSwitch: {},
+      toggleInput: {},
+      toggleSlider: {},
+      textComponent: {}
+    }
   };
 
 

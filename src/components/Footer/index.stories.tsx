@@ -15,6 +15,10 @@ FooterComponent.args = {
   name: 'footer-stories',
   attributes: {
     text: 'Test',
+    styleProps: {
+      footerComponent: {},
+      textComponent: {}
+    }
   }
 }
 
@@ -26,7 +30,8 @@ FooterWithChildren.args = {
     styleProps: {
       footerComponent: {
         justifyContent: 'space-around'
-      }
+      },
+      textComponent: {}
     }
   },
   children: <span>Hello World!</span>

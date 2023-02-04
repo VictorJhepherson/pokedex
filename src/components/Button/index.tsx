@@ -21,14 +21,7 @@ const Button: React.FC<IButtonProps> = ({ name, attributes }) => {
           name={`text-button`}
           attributes={{
             text: text ? text : '',
-            styleProps: {
-              textComponent: {
-                fontFamily: theme.font.fontFamily,
-                fontSize: theme.font.size.medium,
-                fontWeight: theme.font.bold,
-                color: theme.colors.white,
-              }
-            }
+            styleProps: styleProps
           }}
         />
       }
