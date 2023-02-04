@@ -37,7 +37,11 @@ export const CardComponent = styled.div<IProps>`
       }
     `}
 
-    img {
+    .image-container {
+      display: flex;
+      align-items: ${styleProps && styleProps.imageCard.alignItems || 'center'};
+      justify-content: ${styleProps && styleProps.imageCard.justifyContent || 'center'};
+
       width: ${styleProps && styleProps.imageCard.width || '100%'};
       height: ${styleProps && styleProps.imageCard.height || '70%'};
 

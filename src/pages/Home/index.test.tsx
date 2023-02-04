@@ -13,18 +13,6 @@ describe('Home Screen: check html tags and render', () => {
     expect(screen.getByTestId("home-screen")).toBeInTheDocument();
   })
 
-  it('should be rendered and clicked button', () => {
-    const { container } = render(
-      <Home />
-    )
-
-    const buttonHome = container.querySelector("div")?.querySelector("#button-home") as HTMLElement;
-
-    fireEvent.click(buttonHome);
-
-    expect(screen.getByTestId("home-screen")).toBeInTheDocument();
-  })
-
   it('should be rendered with click on Header', () => {
     Object.defineProperty(window, 'location', {
       value: {

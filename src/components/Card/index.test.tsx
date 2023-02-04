@@ -40,6 +40,8 @@ describe('Card: check html tags and render', () => {
               position: 'static',
             },
             imageCard: {
+              alignItems: 'center',
+              justifyContent: 'center',
               width: '100%',
               height: '70%',
               borderTopLeftRadius: '20px',
@@ -77,6 +79,8 @@ describe('Card: check html tags and render', () => {
               position: 'static',
             },
             imageCard: {
+              alignItems: 'center',
+              justifyContent: 'center',
               width: '100%',
               height: '70%',
               borderTopLeftRadius: '20px',

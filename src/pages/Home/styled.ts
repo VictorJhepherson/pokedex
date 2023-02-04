@@ -3,8 +3,6 @@ import theme from "../../styles/theme";
 
 export const Container = styled.div`
   ${() => css`
-    position: relative;
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
