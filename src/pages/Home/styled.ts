@@ -3,6 +3,8 @@ import theme from "../../styles/theme";
 
 export const Container = styled.div`
   ${() => css`
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -14,5 +16,18 @@ export const Container = styled.div`
     background-color: ${theme.colors.white};
 
     font-family: ${theme.font.fontFamily};
+  `}
+`;
+
+export const Content = styled.div`
+  ${() => css`
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    background-color: ${theme.colors.transparent};
   `}
 `;
