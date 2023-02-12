@@ -14,6 +14,8 @@ export const Container = styled.div`
     background-color: ${theme.colors.white};
 
     font-family: ${theme.font.fontFamily};
+
+    overflow-y: auto;
   `}
 `;
 
@@ -24,8 +26,9 @@ export const Content = styled.div`
     justify-content: center;
     flex-direction: column;
 
-    width: 100%;
+    width: 79%;
 
     background-color: ${theme.colors.transparent};
   `}
 `;
+

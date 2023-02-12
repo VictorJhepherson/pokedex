@@ -1,10 +1,13 @@
-export { default as SearchBar } from "./SearchBar";
-export { default as Toggle } from "./Toggle";
-export { default as Text } from "./Text";
-export { default as Button } from "./Button";
-export { default as Input } from "./Input";
-export { default as Image } from "./Image";
-export { default as Card } from "./Card";
-export { default as List } from "./List";
-export { default as Header } from "./Header";
-export { default as Footer } from "./Footer";
+export { default as SearchBar } from "./atoms/SearchBar";
+export { default as Toggle } from "./atoms/Toggle";
+export { default as Text } from "./atoms/Text";
+export { default as Button } from "./atoms/Button";
+export { default as Input } from "./atoms/Input";
+export { default as Image } from "./atoms/Image";
+export { default as Card } from "./atoms/Card";
+export { default as List } from "./atoms/List";
+export { default as Header } from "./atoms/Header";
+export { default as Footer } from "./atoms/Footer";
+export { default as Loading } from "./atoms/Loading";
+
+export { default as PokemonCard } from "./molecules/PokemonCard";

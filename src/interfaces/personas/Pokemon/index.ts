@@ -47,5 +47,5 @@ export interface Pokemon {
   sprites: Sprites;
   species: DefaultProps;
   stats: Stats;
-  types: Types;
+  types: Types[];
 }

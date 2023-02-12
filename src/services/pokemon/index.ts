@@ -1,13 +1,23 @@
 import api from "../api";
 
 export default {
+  get: async (url: string) => {
+    const response = await api.get(url);
+
+    return response.data;
+  },
   getPokemons: async (limit: number, offset: number) => {
     const response = await api.get(`/pokemon?limit=${limit}&offset=${offset}`);
 
     return response.data.results;
   },
-  getPokemon: async (id: number) => {
+  getPokemonById: async (id: number) => {
     const response = await api.get(`/pokemon/${id}`);
+
+    return response.data;
+  },
+  getPokemonByName: async (name: string) => {
+    const response = await api.get(`/pokemon/${name}`);
 
     return response.data;
   },

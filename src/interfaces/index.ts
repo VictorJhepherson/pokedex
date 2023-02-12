@@ -8,5 +8,7 @@ export * from "./components/Card";
 export * from "./components/List";
 export * from "./components/Header";
 export * from "./components/Footer";
+export * from "./components/Loading";
+export * from "./components/PokemonCard";
 
 export * from "./personas/Pokemon";

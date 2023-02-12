@@ -14,6 +14,9 @@ interface IInputAttributes {
   autoComplete?: string;
   hasClearButton?: boolean;
   hasSearchButton?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  onClear?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (e?: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (e?: React.FocusEvent<HTMLInputElement>) => void;
   styleProps?: IStyleProps;
