@@ -1,4 +1,4 @@
-import { IDefaultProps, IStyleProps } from "../global";
+import { IDefaultProps, IStyleProps } from "../../global";
 
 interface IImageStyleProps extends IStyleProps {
   hasHover: boolean;

@@ -1,6 +1,6 @@
 import React from "react";
-import { IDefaultProps, IStyleProps } from "../global";
-import { Pokemon } from "../../personas";
+import { IDefaultProps, IStyleProps } from "../../global";
+import { Pokemon } from "../../../personas";
 
 interface IPokemonCardAttributes {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;

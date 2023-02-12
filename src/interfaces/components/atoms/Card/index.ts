@@ -1,5 +1,5 @@
 import React from "react";
-import { IDefaultProps, IStyleProps } from "../global";
+import { IDefaultProps, IStyleProps } from "../../global";
 
 interface ICardStylesProps extends IStyleProps {
   hasHover: boolean;

@@ -1,4 +1,4 @@
-import { IDefaultProps, IStyleProps } from "../global";
+import { IDefaultProps, IStyleProps } from "../../global";
 
 interface ITextAttributes {
   text: string;

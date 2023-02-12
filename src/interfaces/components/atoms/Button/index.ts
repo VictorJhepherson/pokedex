@@ -1,7 +1,7 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { IDefaultProps, IStyleProps } from "../global";
-import { ButtonTypes } from "../../types";
+import { IDefaultProps, IStyleProps } from "../../global";
+import { ButtonTypes } from "../../../types";
 
 interface IButtonStylesProps extends IStyleProps {
   type: ButtonTypes;

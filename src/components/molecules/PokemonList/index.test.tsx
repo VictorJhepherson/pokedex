@@ -2,21 +2,22 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { useSelectorMockWithValue } from "../../../__mocks__";
-import { PokemonCard } from "../..";
+import { PokemonList } from "../..";
 
 describe('Home Screen: check html tags and render', () => {
   it('should be rendered as default', () => {
-    const pokemon = useSelectorMockWithValue.data[0];
+    const pokemons = useSelectorMockWithValue;
 
     const { container } = render(
-      <PokemonCard
-        name={`pokemon-card`}
+      <PokemonList
+        name={`pokemon-list`}
         attributes={{
-          pokemon: pokemon
+          pokemons: pokemons,
+          isLoading: false,
         }}
       />
     )
 
-    expect(container.querySelector("#pokemon-card")).toBeInTheDocument();
+    expect(container.querySelector("#pokemon-list")).toBeInTheDocument();
   })
 })

@@ -3,13 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container, Content } from "./styled";
 import theme from "../../styles/theme";
 
-import { Pokemon } from "../../interfaces";
 import { PAGINATE } from "../../utils";
 
 import { getPokemons, getPokemonByName } from "../../store/features";
 import { pokemonsSelector, deletePokemons } from "../../store/reducers";
 
-import { Header, SearchBar, Text, List, PokemonCard, Loading, Footer } from "../../components";
+import { Header, SearchBar, Text, PokemonList, Footer } from "../../components";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -20,7 +19,7 @@ export default function Home() {
 
   const pokemons = useSelector(pokemonsSelector);
 
-  const isScrolling = () => {
+  const isScrollingMethod = () => {
     if ((document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.scrollHeight) setOffset(offset + PAGINATE);
   }
 
@@ -30,8 +29,8 @@ export default function Home() {
 
     if (pokemons.data.length !== 0) setIsLoading(false);
 
-    window.addEventListener('scroll', isScrolling);
-    return () => window.removeEventListener('scroll', isScrolling);
+    window.addEventListener('scroll', isScrollingMethod);
+    return () => window.removeEventListener('scroll', isScrollingMethod);
   }, [offset]);
 
   return (
@@ -107,36 +106,18 @@ export default function Home() {
         />
       </Content>
 
-      <List
-        name={`list-home`}
+      <PokemonList
+        name={`list-pokemons`}
         attributes={{
+          pokemons: pokemons,
+          isLoading: isLoading,
           styleProps: {
             listComponent: {
               width: '85%',
             },
           }
         }}
-      >
-        <>
-          {isLoading && pokemons.data.length === 0
-            ? <Loading
-                name={`loading-home-list`}
-                attributes={{}}
-              />
-            : pokemons.data.map((pokemon: Pokemon, index: number) => {
-              return (
-                <PokemonCard
-                  key={index}
-                  name={`pokemon-card-${index}`}
-                  attributes={{
-                    pokemon: pokemon
-                  }}
-                />
-              )
-            })
-          }
-        </>
-      </List>
+      />
 
       <Footer
         name="footer-home"

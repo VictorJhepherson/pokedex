@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { IDefaultProps, IStyleProps } from "../global";
+import { IDefaultProps, IStyleProps } from "../../global";
 
 interface IToggleAttributes {
   toggleOn: boolean;

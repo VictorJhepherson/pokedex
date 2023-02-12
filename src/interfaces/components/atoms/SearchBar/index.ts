@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { IDefaultProps, IStyleProps } from "../global";
+import { IDefaultProps, IStyleProps } from "../../global";
 
 interface ISearchBarAttributes {
   searchValue: string;

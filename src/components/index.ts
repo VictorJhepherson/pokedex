@@ -11,3 +11,4 @@ export { default as Footer } from "./atoms/Footer";
 export { default as Loading } from "./atoms/Loading";
 
 export { default as PokemonCard } from "./molecules/PokemonCard";
+export { default as PokemonList } from "./molecules/PokemonList";
