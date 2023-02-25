@@ -25,7 +25,8 @@ export default function Home() {
 
   useEffect(() => {
     setIsLoading(true);
-    getPokemons(dispatch, { offset: offset });
+    console.log(searchValue)
+    if (searchValue.length === 0) getPokemons(dispatch, { offset: offset });
 
     if (pokemons.data.length !== 0) setIsLoading(false);
 
