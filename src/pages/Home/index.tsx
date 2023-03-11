@@ -25,7 +25,6 @@ export default function Home() {
 
   useEffect(() => {
     setIsLoading(true);
-    console.log(searchValue)
     if (searchValue.length === 0) getPokemons(dispatch, { offset: offset });
 
     if (pokemons.data.length !== 0) setIsLoading(false);
@@ -78,6 +77,7 @@ export default function Home() {
               getPokemonByName(dispatch, searchValue.toLowerCase())
             },
             onClear: () => {
+              setOffset(0)
               dispatch(deletePokemons({}));
               getPokemons(dispatch, { offset: 0 })
             },
@@ -85,6 +85,7 @@ export default function Home() {
               setSearchValue(e.target.value)
 
               if (e.target.value.length === 0) {
+                setOffset(0)
                 dispatch(deletePokemons({}));
                 getPokemons(dispatch, { offset: 0 })
               }
@@ -114,7 +115,7 @@ export default function Home() {
           isLoading: isLoading,
           styleProps: {
             listComponent: {
-              width: '85%',
+              width: '100%',
             },
           }
         }}

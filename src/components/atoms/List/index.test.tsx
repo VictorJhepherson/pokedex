@@ -27,6 +27,8 @@ describe('List: check html tags and render', () => {
               alignItems: 'center',
               justifyContent: 'space-around',
               flexWrap: 'wrap',
+              columnGap: '16px',
+              rowGap: '16px',
               width: '100px',
               padding: '20px',
               backgroundColor: theme.colors.transparent,

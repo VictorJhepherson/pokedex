@@ -13,6 +13,8 @@ export const ListComponent = styled.div<IProps>`
     align-items: ${styleProps && styleProps.listComponent.alignItems || 'center'};
     justify-content: ${styleProps && styleProps.listComponent.justifyContent || 'space-around'};
     flex-wrap: ${styleProps && styleProps.listComponent.flexWrap || 'wrap'};
+    column-gap: ${styleProps && styleProps.listComponent.columnGap || '16px'};
+    row-gap: ${styleProps && styleProps.listComponent.rowGap || '16px'};
 
     width: ${styleProps && styleProps.listComponent.width || '100%'};
     padding: ${styleProps && styleProps.listComponent.padding || '20px'};

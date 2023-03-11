@@ -25,8 +25,9 @@ export const Content = styled.div`
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    padding-left: 16px;
 
-    width: 79%;
+    width: 100%;
 
     background-color: ${theme.colors.transparent};
   `}

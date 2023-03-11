@@ -1,1 +1,1 @@
-export const PAGINATE = 6;
+export const PAGINATE = 8;
