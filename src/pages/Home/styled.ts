@@ -19,13 +19,13 @@ export const Container = styled.div`
   `}
 `;
 
-export const Content = styled.div`
-  ${() => css`
+export const Content = styled.div<{ isMobile: number }>`
+  ${({ isMobile }) => css`
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding-left: 16px;
+    padding: ${isMobile ? '24px' : '16px'};
 
     width: 100%;
 

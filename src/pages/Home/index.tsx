@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container, Content } from "./styled";
 import theme from "../../styles/theme";
 
-import { PAGINATE } from "../../utils";
+import { PAGINATE, isMobile } from "../../utils";
 
 import { getPokemons, getPokemonByName } from "../../store/features";
 import { pokemonsSelector, deletePokemons } from "../../store/reducers";
@@ -50,7 +50,7 @@ export default function Home() {
         }}
       />
 
-      <Content>
+      <Content isMobile={isMobile ? 1 : 0}>
         <Text
           name={"title-home"}
           attributes={{
@@ -58,7 +58,7 @@ export default function Home() {
             styleProps: {
               textComponent: {
                 fontFamily: theme.font.fontFamily,
-                fontSize: theme.font.size.xxlarge,
+                fontSize: isMobile ? theme.font.size.xlarge : theme.font.size.xxlarge,
                 fontWeight: theme.font.bold,
                 color: theme.colors.black,
                 margin: '20px',
@@ -97,11 +97,11 @@ export default function Home() {
                 alignItems: 'flex-start',
               },
               inputArea: {
-                width: '65%',
+                width: isMobile ? '90%' : '65%',
                 justifyContent: 'flex-start',
               },
               inputComponent: {
-                width: '65%',
+                width: isMobile ? '90%' : '65%',
               }
             }
           }}
