@@ -1,6 +1,6 @@
 {
-  "name": "react-default-project",
-  "version": "0.1.0",
+  "name": "pokedex",
+  "version": "0.1.1",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
